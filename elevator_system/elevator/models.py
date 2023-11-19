@@ -1,3 +1,16 @@
 from django.db import models
 
-# Create your models here.
+class Floor(models.Model):
+    pass
+
+
+class Elevator(models.Model):
+    pass
+
+
+class UserRequest(models.model):
+    pass
+
+
+
+
