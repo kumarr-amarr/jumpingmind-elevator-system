@@ -54,6 +54,18 @@ def move_elevator_down(request):
     elevator.save()
     return Response({'message': 'Elevator moving down'}, status=status.HTTP_200_OK)
 
+@api_view(['GET'])
+def fetch_next_destination(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    next_destination = elevator.userrequest_set.first()
+    
+    if next_destination is not None:
+        return Response({'next_destination': next_destination.floor_number})
+    else:
+        return Response({'message': 'No pending requests'}, status=status.HTTP_204_NO_CONTENT)
+
+
 @api_view(['POST'])
 def stop_elevator(request):
     elevator_id = request.data.get('elevator_id')
