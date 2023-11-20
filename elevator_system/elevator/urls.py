@@ -7,6 +7,8 @@ from .views import (
    move_elevator_down,
    save_user_request,
    fetch_requests_for_elevator,
+   update_elevator_status,
+   
    
 )
 urlpatterns = [
@@ -17,4 +19,5 @@ urlpatterns = [
    path('move_elevator_down/', move_elevator_down, name='move_elevator_down'),
    path('save_user_request/', save_user_request, name='save_user_request'),
    path('fetch_requests_for_elevator/', fetch_requests_for_elevator, name='fetch_requests_for_elevator'),
+   path('update_elevator_status/', update_elevator_status, name='update_elevator_status'),
 ]

@@ -72,3 +72,11 @@ def fetch_requests_for_elevator(request):
     requests = UserRequest.objects.filter(elevator=elevator)
     serializer = UserRequestSerializer(requests, many=True)
     return Response(serializer.data)
+
+@api_view(['PUT'])
+def update_elevator_status(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.running = False
+    elevator.save()
+    return Response({'message': 'Elevator marked as not working'}, status=status.HTTP_200_OK)
