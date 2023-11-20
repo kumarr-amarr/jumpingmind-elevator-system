@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "a1083f0d-4bd7-4036-b354-c2bcb680736a",
+		"name": "elevator-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19665212",
+		"_collection_link": "https://bold-meteor-704316.postman.co/workspace/employeeefforttrackingportal~95a9f181-228a-4ea0-ae4b-c07716f18d2c/collection/19665212-a1083f0d-4bd7-4036-b354-c2bcb680736a?action=share&source=collection_link&creator=19665212"
+	},
+	"item": [
+		{
+			"name": "open_door",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/open_door/"
+			},
+			"response": []
+		},
+		{
+			"name": "move_elevator_up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/move_elevator_up/"
+			},
+			"response": []
+		},
+		{
+			"name": "move_elevator_down",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/move_elevator_down/"
+			},
+			"response": []
+		},
+		{
+			"name": "stop_elevator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/stop_elevator/"
+			},
+			"response": []
+		},
+		{
+			"name": "mark_elevator_operational",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/mark_elevator_operational/"
+			},
+			"response": []
+		},
+		{
+			"name": "mark_elevator_non_operational",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/mark_elevator_non_operational/"
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_next_destination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/fetch_next_destination/"
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_elevator_direction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/fetch_elevator_direction/"
+			},
+			"response": []
+		},
+		{
+			"name": "save_user_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1,\r\n\"floor_number\":\"1\",\r\n\"direction\":\"up\",\r\n\"elevator\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/stop_elevator/"
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_requests_for_elevator",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/fetch_requests_for_elevator/"
+			},
+			"response": []
+		},
+		{
+			"name": "close_door",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/close_door/"
+			},
+			"response": []
+		},
+		{
+			"name": "initialize_elevator_system",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"num_elevators\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/initialize_elevator_system/"
+			},
+			"response": []
+		},
+		{
+			"name": "update_elevator_status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"headers\":{\r\n            \"clientTxnId\":\"9898981\",\r\n            \"requestTimestamp\":\"20210619 11:25\"\r\n    },\r\n\r\n\"elevator_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/elevator/update_elevator_status/"
+			},
+			"response": []
+		}
+	]
+}

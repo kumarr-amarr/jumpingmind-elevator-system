@@ -1,4 +1,5 @@
 from django.urls import path
+#imported views functions in a tupple
 from .views import (
    initialize_elevator_system,
    fetch_requests_for_elevator,
@@ -15,6 +16,7 @@ from .views import (
    fetch_elevator_direction,
 )
 
+#defines urls path for http request, shows how apis will be called 
 urlpatterns = [
    path('initialize_elevator_system/', initialize_elevator_system, name='initialize_elevator_system'),
    path('fetch_requests_for_elevator/', fetch_requests_for_elevator, name='fetch_requests_for_elevator'),
