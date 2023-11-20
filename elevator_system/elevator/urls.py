@@ -6,6 +6,7 @@ from .views import (
    move_elevator_up,
    move_elevator_down,
    save_user_request,
+   fetch_requests_for_elevator,
    
 )
 urlpatterns = [
@@ -15,5 +16,5 @@ urlpatterns = [
    path('move_elevator_up/', move_elevator_up, name='move_elevator_up'),
    path('move_elevator_down/', move_elevator_down, name='move_elevator_down'),
    path('save_user_request/', save_user_request, name='save_user_request'),
-   
+   path('fetch_requests_for_elevator/', fetch_requests_for_elevator, name='fetch_requests_for_elevator'),
 ]

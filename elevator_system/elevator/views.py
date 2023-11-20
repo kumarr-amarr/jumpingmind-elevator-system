@@ -64,3 +64,11 @@ def save_user_request(request):
         serializer.save(elevator=elevator)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+def fetch_requests_for_elevator(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    requests = UserRequest.objects.filter(elevator=elevator)
+    serializer = UserRequestSerializer(requests, many=True)
+    return Response(serializer.data)
