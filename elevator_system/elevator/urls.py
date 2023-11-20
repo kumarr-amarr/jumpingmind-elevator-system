@@ -9,6 +9,8 @@ from .views import (
    save_user_request,
    fetch_requests_for_elevator,
    update_elevator_status,
+   mark_elevator_operational,
+   mark_elevator_non_operational
 )
 
 urlpatterns = [
@@ -21,4 +23,6 @@ urlpatterns = [
    path('save_user_request/', save_user_request, name='save_user_request'),
    path('fetch_requests_for_elevator/', fetch_requests_for_elevator, name='fetch_requests_for_elevator'),
    path('update_elevator_status/', update_elevator_status, name='update_elevator_status'),
+   path('mark_elevator_operational/', mark_elevator_operational, name='mark_elevator_operational'),
+   path('mark_elevator_non_operational/', mark_elevator_non_operational, name='mark_elevator_non_operational'),
 ]

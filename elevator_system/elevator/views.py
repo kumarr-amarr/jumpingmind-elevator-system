@@ -87,4 +87,20 @@ def update_elevator_status(request):
     elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
     elevator.running = False
     elevator.save()
-    return Response({'message': 'Elevator marked as not working'}, status=status.HTTP_200_OK)
+    return Response({'message': 'Elevator not working'}, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+def mark_elevator_operational(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.operational = True
+    elevator.save()
+    return Response({'message': 'Elevator is operational'}, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+def mark_elevator_non_operational(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.operational = False
+    elevator.save()
+    return Response({'message': 'Elevator is non-operational'}, status=status.HTTP_200_OK)
