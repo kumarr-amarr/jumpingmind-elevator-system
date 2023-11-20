@@ -26,3 +26,11 @@ def open_door(request):
     elevator.door_status = 'open'
     elevator.save()
     return Response({'message': 'Elevator door opened'}, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+def close_door(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.door_status = 'closed'
+    elevator.save()
+    return Response({'message': 'Elevator door closed'}, status=status.HTTP_200_OK)
