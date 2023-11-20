@@ -34,3 +34,30 @@ def close_door(request):
     elevator.door_status = 'closed'
     elevator.save()
     return Response({'message': 'Elevator door closed'}, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+def move_elevator_up(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.current_floor += 1
+    elevator.direction = 'up'
+    elevator.save()
+    return Response({'message': 'Elevator moving up'}, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+def move_elevator_down(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.current_floor -= 1
+    elevator.direction = 'down'
+    elevator.save()
+    return Response({'message': 'Elevator moving down'}, status=status.HTTP_200_OK)
+
+
+
+
+
+
+
+
+
