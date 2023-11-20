@@ -64,7 +64,12 @@ def fetch_next_destination(request):
         return Response({'next_destination': next_destination.floor_number})
     else:
         return Response({'message': 'No pending requests'}, status=status.HTTP_204_NO_CONTENT)
-
+    
+@api_view(['GET'])
+def fetch_elevator_direction(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    return Response({'direction': elevator.direction})
 
 @api_view(['POST'])
 def stop_elevator(request):

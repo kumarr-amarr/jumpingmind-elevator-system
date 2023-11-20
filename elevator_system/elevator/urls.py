@@ -11,7 +11,8 @@ from .views import (
    fetch_requests_for_elevator,
    update_elevator_status,
    mark_elevator_operational,
-   mark_elevator_non_operational
+   mark_elevator_non_operational,
+   fetch_elevator_direction,
 )
 
 urlpatterns = [
@@ -21,6 +22,7 @@ urlpatterns = [
    path('move_elevator_up/', move_elevator_up, name='move_elevator_up'),
    path('move_elevator_down/', move_elevator_down, name='move_elevator_down'),
    path('fetch_next_destination/', fetch_next_destination, name='fetch_next_destination'),
+   path('fetch_elevator_direction/', fetch_elevator_direction, name='fetch_elevator_direction'),
    path('stop_elevator/', stop_elevator, name='stop_elevator'),
    path('save_user_request/', save_user_request, name='save_user_request'),
    path('fetch_requests_for_elevator/', fetch_requests_for_elevator, name='fetch_requests_for_elevator'),
