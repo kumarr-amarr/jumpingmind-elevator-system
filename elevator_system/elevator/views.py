@@ -55,6 +55,14 @@ def move_elevator_down(request):
     return Response({'message': 'Elevator moving down'}, status=status.HTTP_200_OK)
 
 @api_view(['POST'])
+def stop_elevator(request):
+    elevator_id = request.data.get('elevator_id')
+    elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
+    elevator.direction = 'stop'
+    elevator.save()
+    return Response({'message': 'Elevator stopped'}, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
 def save_user_request(request):
     elevator_id = request.data.get('elevator_id')
     elevator = get_object_or_404(Elevator, elevator_id=elevator_id)
